@@ -23,11 +23,10 @@ public class Main {
         return inputArray;
     }
     private static int findMin( int[] inputArray) {
-        inputArray = readElements(readInteger());
         int min = inputArray[0];
-        for ( int i = 0 ; i < inputArray.length ; i++) {
-            if ( inputArray[i] < min ) {
-                min = inputArray[i];
+        for (int j : inputArray) {
+            if (j < min) {
+                min = j;
             }
         }
         return min;
