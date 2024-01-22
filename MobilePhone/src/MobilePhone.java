@@ -20,19 +20,23 @@ public class MobilePhone {
         return true;
     }
     public boolean updateContact( Contact oldContact, Contact newContact) {
+        boolean flag1 = false;
         if (!addNewContact(oldContact)) {
-//            myContacts.set(myContacts.indexOf(oldContact), newContact);
-            return true;
+            flag1 = true;
+            myContacts.set(myContacts.indexOf(oldContact), newContact);
         }
-        return false;
+        boolean flag2 = addNewContact(oldContact);
+        return flag1 && flag2;
     }
+
     public boolean removeContact(Contact contact) {
-        if ( myContacts.contains(contact) ) {
+        boolean flag1 = false;
+        if (!addNewContact(contact)) {
             myContacts.remove(contact);
-            return myContacts.contains(contact);
-        } else {
-            return false;
+            flag1 = true;
         }
+        boolean flag2 = addNewContact(contact);
+        return flag1 && flag2;
     }
     private int findContact(Contact contact) {
         return myContacts.indexOf(contact);
