@@ -28,9 +28,6 @@ public class Main {
        for ( int i = 0 ; i < inputArray.length ; i++) {
            inputArray[i] = copiedArray[ inputArray.length-1-i ];
        }
-        System.out.println( Arrays.toString(copiedArray) );
-        System.out.println( Arrays.toString(inputArray) );
-
        return inputArray;
     }
 }
