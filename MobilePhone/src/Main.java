@@ -9,7 +9,7 @@ public class Main {
         System.out.println(mobilePhone.addNewContact(contact3));
         System.out.println(mobilePhone.addNewContact(contact1));
         System.out.println(mobilePhone.updateContact(contact1,contact4));
-        System.out.println(mobilePhone.removeNewContact(contact1));
+        System.out.println(mobilePhone.removeContact(contact1));
 //        mobilePhone.addNewContact(contact1);
 //        System.out.println(mobilePhone.queryContact("Zar"));
         mobilePhone.printContacts();
