@@ -1,12 +1,19 @@
+package dev.test;
+
 abstract class ListItem {
     protected ListItem rightLink;
     protected ListItem leftLink;
     protected  Object value;
-    abstract void next();
-    abstract void setNext();
-    abstract void previous();
-    abstract  void setPrevious();
-    abstract void compareTo();
+
+    public ListItem(Object value) {
+        this.value = value;
+    }
+
+    abstract ListItem next();
+    abstract ListItem setNext(ListItem listItem);
+    abstract ListItem previous();
+    abstract  ListItem setPrevious( ListItem listItem);
+    abstract int compareTo(ListItem listItem);
 
     public Object getValue() {
         return value;
