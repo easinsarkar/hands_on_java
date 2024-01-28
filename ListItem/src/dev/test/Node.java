@@ -28,8 +28,10 @@ class Node extends ListItem{
 
     @Override
     int compareTo(ListItem listItem) {
-        int comparedValue = ((Integer)super.getValue()).compareTo((Integer)listItem.getValue());
-        return comparedValue;
+
+        return listItem != null
+                ? (String.valueOf(super.getValue())).compareTo(String.valueOf(listItem.getValue()))
+                : -1;
 
     }
 }

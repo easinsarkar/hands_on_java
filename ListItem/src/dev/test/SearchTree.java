@@ -13,17 +13,17 @@ class SearchTree implements NodeList{
     }
 
     @Override
-    public void addItem() {
-
+    public boolean addItem(ListItem listItem) {
+        return false;
     }
 
     @Override
-    public void removeItem() {
-
+    public boolean removeItem( ListItem listItem) {
+        return false;
     }
 
     @Override
-    public void traverse() {
+    public void traverse( ListItem root) {
 
     }
 }
