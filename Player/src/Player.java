@@ -48,12 +48,35 @@ public class Player implements ISaveable{
 
     @Override
     public List<String> write() {
-        List<String> newList = List.of(name,weapon, toString(hitPoints),strength);
+        List<String> newList = new ArrayList<>();
+        newList.add(name);
+        newList.add(String.valueOf(hitPoints));
+        newList.add(String.valueOf(strength));
+        newList.add(weapon);
+//        newList.add("name='" + name + "'");
+//        newList.add("hitPoints=" + hitPoints);
+//        newList.add("strength=" + strength);
+//        newList.add("weapon='" + weapon + "'");
         return newList;
     }
 
     @Override
     public void read(List<String> list) {
+        if ( list != null && !list.isEmpty()) {
+            this.name = list.get(0);
+            this.hitPoints = Integer.parseInt(list.get(1));
+            this.strength = Integer.parseInt(list.get(2));
+            this.weapon = list.get(3);
+        }
+    }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name+
+                "', hitPoints=" + hitPoints +
+                ", strength=" + strength +
+                ", weapon='" + weapon +
+                "'}";
     }
 }
